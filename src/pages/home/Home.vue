@@ -1,17 +1,19 @@
 <template>
   <div>
-    <div class="home">Home</div>
+    <home-header ></home-header>
   </div>
 </template>
 
 <script>
+import HomeHeader from './components/header'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    'home-header': HomeHeader
+  }
 }
 </script>
 
 <style scoped>
-  .home{
-    font-size: 30px;
-  }
 </style>
