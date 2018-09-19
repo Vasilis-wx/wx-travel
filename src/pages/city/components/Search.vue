@@ -45,6 +45,13 @@ export default {
       return !this.list.length
     }
   },
+  methods: {
+    handleCityClick (city) {
+      // this.$store.dispatch('changeCity', city)
+      this.$store.commit('changeCity', city)
+      this.$router.push('/')
+    }
+  },
   watch: {
     keyword () {
       if (this.timer) {
