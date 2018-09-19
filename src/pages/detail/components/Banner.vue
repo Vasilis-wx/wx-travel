@@ -10,8 +10,7 @@
                 </div>
                 <div class="banner-number">
                     <span class="iconfont banner-icon">&#xe60f;</span>
-                    40
-                  <!--{{this.gallaryImgs.length}}-->
+                    {{this.gallaryImgs.length}}
                 </div>
             </div>
         </div>
@@ -31,21 +30,18 @@ import CommonGallary from 'common/gallary/Gallary'
 // import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
   name: 'DetailBanner',
-  // props: {
-  //   sightName: String,
-  //   bannerImg: String,
-  //   gallaryImgs: Array
-  // },
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
+  },
   components: {
     CommonGallary
     // FadeAnimation
   },
   data () {
     return {
-      showGallary: false,
-      sightName: '打脸生涯海洋世界',
-      gallaryImgs: ['http://img1.qunarzz.com/sight/source/1505/b2/fde1bfcd057a52.jpg_r_640x214_bbf3fa44.jpg',
-        'http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg']
+      showGallary: false
     }
   },
   methods: {

@@ -38,10 +38,10 @@ export default {
       }
     }
   },
-  activated () {
+  activated () { // 每次页面展示时执行
     window.addEventListener('scroll', this.handleScroll)
   },
-  deactivated () {
+  deactivated () { // 页面即将隐藏是执行，解绑全局时间
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
