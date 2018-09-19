@@ -13,8 +13,6 @@
 </template>
 
 <script>
-import HomeHeader from './components/header'
-import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
@@ -27,8 +25,8 @@ import { mapState } from 'vuex'
 export default {
   name: 'Home',
   components: {
-    HomeHeader,
-    HomeSwiper,
+    HomeHeader: () => import('./components/header'),
+    HomeSwiper: () => import('./components/Swiper'),
     HomeIcons,
     HomeRecommend,
     HomeWeekend
