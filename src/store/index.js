@@ -9,7 +9,6 @@ export default new Vuex.Store({
   state: state,
   actions: {
     changeCity (ctx, city) {
-      console.info('actions')
       ctx.commit('changeCity', city)
     }
   },
