@@ -1,15 +1,15 @@
 <template>
-    <div>
-       <router-link tag="div" to="/" class="header-abs" v-show="showAbs">
-            <span class="iconfont header-abs-back">&#xe624;</span>
-       </router-link>
-       <div class="header-fixed" v-show="!showAbs" :style="opacityStyle">
-           景点详情
-           <router-link to="/">
-            <div class="iconfont header-fixed-back">&#xe624;</div>
-            </router-link>
-       </div>
+  <div>
+    <router-link tag="div" to="/" class="header-abs" v-show="showAbs">
+      <span class="iconfont header-abs-back">&#xe624;</span>
+    </router-link>
+    <div class="header-fixed" v-show="!showAbs" :style="opacityStyle">
+      景点详情
+      <router-link to="/">
+        <div class="iconfont header-fixed-back">&#xe624;</div>
+      </router-link>
     </div>
+  </div>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     handleScroll () {
-      const top = document.body.scrollTop
+      const top = document.documentElement.scrollTop
       if (top > 60) {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
@@ -48,8 +48,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~styles/varibles.styl';
-.header-abs{
+  @import '~styles/varibles.styl';
+  .header-abs {
     position: absolute
     left: .2rem
     top: .2rem
@@ -59,13 +59,13 @@ export default {
     border-radius: .4rem
     text-align: center
     background: rgba(0, 0, 0, .8)
-    .header-abs-back{
-        color: #fff
-        font-size: .4rem
+    .header-abs-back {
+      color: #fff
+      font-size: .4rem
     }
-}
+  }
 
-.header-fixed {
+  .header-fixed {
     z-index: 2
     position: fixed;
     top: 0
@@ -79,13 +79,13 @@ export default {
     font-size: 0.32rem;
 
     .header-fixed-back {
-        top: 0;
-        left: 0;
-        position: absolute;
-        width: 0.64rem;
-        text-align: center;
-        font-size: 0.4rem;
-        color: #fff;
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 0.64rem;
+      text-align: center;
+      font-size: 0.4rem;
+      color: #fff;
     }
-}
+  }
 </style>

@@ -51,7 +51,7 @@ export default {
   methods: {
     handleBannerClick () {
       this.showGallary = true
-    } ,
+    },
     handleGallaryClick () {
       this.showGallary = false
     }
